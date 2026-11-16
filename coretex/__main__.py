@@ -9,7 +9,6 @@ from coretex.core.factory import TemperatureSensorCreator
 from coretex.core.services import DeviceService, StorageListener, TelemetryService
 
 
-
 def main() -> None:
     #build the core and connect it to the adapters
     repository = InMemoryRepository()

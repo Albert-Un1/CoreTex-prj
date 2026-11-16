@@ -3,7 +3,6 @@ from dataclasses import dataclass
 from datetime import datetime
 
 
-
 @dataclass(frozen=True)
 class Reading:
     device_id: str #which device sent

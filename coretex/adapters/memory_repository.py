@@ -2,7 +2,6 @@ from coretex.core.domain import Device, Reading
 from coretex.core.ports import RepositoryPort
 
 
-
 #Outbound adapter - memory
 class InMemoryRepository(RepositoryPort):
     def __init__(self) -> None:

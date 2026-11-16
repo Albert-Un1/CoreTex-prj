@@ -5,7 +5,6 @@ from coretex.core.factory import DeviceCreator
 from coretex.core.ports import DevicePort, RepositoryPort, TelemetryPort
 
 
-
 #Observer super
 class TelemetryListener(ABC):
     @abstractmethod

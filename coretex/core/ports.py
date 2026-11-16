@@ -2,8 +2,6 @@ from abc import ABC, abstractmethod
 
 from coretex.core.domain import Device, Reading
 
-
-
 #Inbound ports:
 
 class TelemetryPort(ABC):
