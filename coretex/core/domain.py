@@ -37,3 +37,9 @@ class TemperatureSensor(Device):
 
     def accepts(self, reading: Reading) -> bool:
         return reading.type == "temperature" and self.MIN_C <= reading.value <= self.MAX_C
+
+#Device not registered
+class UnknownDeviceError(Exception):
+    def __init__(self, device_id: str) -> None:
+        super().__init__(f"Unknown device: {device_id}")
+
