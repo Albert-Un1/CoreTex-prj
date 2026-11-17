@@ -14,16 +14,16 @@ class DeviceCreator(ABC):
     def create_device(self, device_id: str, name: str, room: str) -> Device:
         pass
 
-    def create(self, device_id: str, name: str, room: str) -> Device:
-        for field, value in (("id", device_id), ("name", name), ("room", room)):
+    def create(self, device_id: str, name: str, room: str, address: str) -> Device:
+        for field, value in (("id", device_id), ("name", name), ("room", room), ("address", address)):
             if not value.strip():
                 raise ValueError(f"Device {field} must not be blank")
-        return self.create_device(device_id, name, room)
+        return self.create_device(device_id, name, room, address)
 
 #ConcreteCreator
 class TemperatureSensorCreator(DeviceCreator):
     def device_type(self) -> str:
         return TemperatureSensor.TYPE
 
-    def create_device(self, device_id: str, name: str, room: str) -> Device:
-        return TemperatureSensor(device_id, name, room)
+    def create_device(self, device_id: str, name: str, room: str, address: str) -> Device:
+        return TemperatureSensor(device_id, name, room, address)
